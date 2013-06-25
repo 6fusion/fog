@@ -25,7 +25,7 @@ module Fog
 
         { :bits => 64, :cpu => 16, :cpu_speed => 2400.084, :cores => 35,   :disk => 2048,            :id => "hi1.4xlarge", :name => "High I/O Quadruple Extra Large Instance", :ram => 61952},
 
-        { :bits => 64, :cpu =>16,  :cpu_speed => 1999.999, :cores => 35,   :disk => 422212465065984, :id => 'hs1.8xlarge', :name => 'High Storage Eight Extra Large',          :ram => 119808}
+        { :bits => 64, :cpu =>16,  :cpu_speed => 1999.999, :cores => 35,   :disk => 422212465065984, :id => 'hs1.8xlarge', :name => 'High Storage Eight Extra Large',          :ram => 119808},
         
         # The instances below cannot be launched from our UI 
         { :bits => 64, :cpu => 32,  :cpu_speed => 0, :cores => 88,   :disk => 240,  :id => 'cr1.8xlarge', :name => 'High Memory Cluster Eight Extra Large', :ram => 249856},
