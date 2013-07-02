@@ -5,4 +5,5 @@ group :development, :test do
   gem 'coveralls', :require => false
 end
 
+gem 'excon', git:'https://github.com/geemus/excon.git', :ref => '21db413'
 gemspec
