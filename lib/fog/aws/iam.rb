@@ -4,6 +4,7 @@ module Fog
   module AWS
     class IAM < Fog::Service
 
+      class AccessDenied < Fog::AWS::IAM::Error; end
       class EntityAlreadyExists < Fog::AWS::IAM::Error; end
       class KeyPairMismatch < Fog::AWS::IAM::Error; end
       class LimitExceeded < Fog::AWS::IAM::Error; end
@@ -212,7 +213,7 @@ module Fog
             case match[1]
             when 'CertificateNotFound', 'NoSuchEntity'
               raise Fog::AWS::IAM::NotFound.slurp(error, match[2])
-            when 'EntityAlreadyExists', 'KeyPairMismatch', 'LimitExceeded', 'MalformedCertificate', 'ValidationError'
+            when 'AccessDenied', 'EntityAlreadyExists', 'KeyPairMismatch', 'LimitExceeded', 'MalformedCertificate', 'ValidationError'
               raise Fog::AWS::IAM.const_get(match[1]).slurp(error, match[2])
             else
               raise Fog::AWS::IAM::Error.slurp(error, "#{match[1]} => #{match[2]}") if match[1]
