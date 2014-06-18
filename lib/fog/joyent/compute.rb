@@ -1,7 +1,3 @@
-require 'fog/joyent/core'
-require 'fog/joyent/errors'
-require 'net/ssh'
-
 module Fog
   module Compute
     class Joyent < Fog::Service

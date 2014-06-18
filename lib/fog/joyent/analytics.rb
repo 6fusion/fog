@@ -1,5 +1,3 @@
-require 'fog/joyent'
-require 'fog/joyent/errors'
 require 'thread'
 
 module Fog
